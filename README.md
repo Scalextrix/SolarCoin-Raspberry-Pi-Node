@@ -19,7 +19,7 @@ The Raspberry Pi will boot for the first time, login with user 'pi' and password
 
 You will be presented with the Raspberry Pi Software Configuration Tool (raspi-config). To navigate in this tool, the useful keys are: The up/down arrow, the Enter key, and the Tab key whenever the up/down arrow keys don’t do the job. Here, we will do next things:
 
-  b.1) Expand the Filesystem by choosing Option 1, TAB to <Finish>, and Reboot. You will get a message Root partition has been resized.  If you are on SSH your terminal may abort, if this occurs just close the session and login to the Pi again.
+  b.1) Expand the Filesystem by choosing Option 1, TAB to Finish, and Reboot. You will get a message Root partition has been resized.  If you are on SSH your terminal may abort, if this occurs just close the session and login to the Pi again.
 
   b.2) Select your Proper Time Zone and Change the User Password by choosing option 2. Enter your new password twice. When entering the password, the characters won’t be displayed as a security feature. You will get a message Password changed successfully.
 After reboot check the time is correct with:
@@ -34,7 +34,7 @@ Select Advanced Options > Memory Split
 
 Change the entry from 64 to 16
 
-TAB to <FINISH> and Reboot
+TAB to FINISH and Reboot
 
 b.4) OPTIONAL (not needed if using desktop): If you have a Pi3 with internal Wi-Fi on SSH and would prefer to connect to the Pi via Wi-Fi; then edit the wpa_supplicant.conf file
 
