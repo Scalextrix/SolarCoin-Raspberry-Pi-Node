@@ -1,6 +1,13 @@
 # SolarCoin-Raspberry-Pi-Node
 Instructions to build a SolarCoin full node on Raspberry Pi
 
+PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH USE OR OTHER DEALINGS.
+
 You will need to be able to open the command line Terminal either using a screen on the HDMI port with a keyboard and mouse, or via SSH.  The guide will compile a version of SolarCoin that can only be controlled via the command line.
 
 1 - The distribution version we need to flash on the SD card is the latest Stable Raspbian Image from: https://www.raspberrypi.org/downloads/raspbian/
