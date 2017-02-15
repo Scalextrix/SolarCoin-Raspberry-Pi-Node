@@ -276,4 +276,8 @@ CTRL X, Y and Enter to save
 
 You should see an enabled service with a 'PID' number
 
-That is it; you now have a SolarCoin node on your Raspberry Pi.  You need to wait for the block-chain to sync, this may take several days!  If you forget a command solarcoind help is your best friend!
+That is it; you now have a SolarCoin node on your Raspberry Pi.  You need to wait for the block-chain to sync, this may take several days!  If you forget a command 
+
+> solarcoind help 
+
+is your best friend!
