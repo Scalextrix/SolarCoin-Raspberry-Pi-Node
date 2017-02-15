@@ -44,9 +44,9 @@ Add the following lines
 
 > network={
 
->         ssid="YOURWIFISSID"
+> ssid="YOURWIFISSID"
 
->         psk="YOURWIFIPSK"
+> psk="YOURWIFIPSK"
 
 > }
 
@@ -74,9 +74,11 @@ Make sure it reads CONF_SWAPSIZE=1024 Use the left/right arrow keys to navigate 
 Use the following commands to enable the swap file with its new size:
 
 > sudo dphys-swapfile setup
+
 NOTE: This may take a few minutes
 
 > sudo dphys-swapfile swapon
+
 You can check the new active swap size with next command:
 
 > free -m
@@ -103,7 +105,7 @@ c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
 
 > export LIBRARY_PATH="/usr/local/BerkeleyDB.4.8/lib"
 
-Note: the export commands are only valid in the current Terminal session. To avoid errors, don't close the Terminal until you fully completed with SolarCoin compilation.
+** NOTE: the export commands are only valid in the current Terminal session. To avoid errors, don't close the Terminal until you fully completed with SolarCoin compilation. **
 
 5- Clone the SolarCoin Github, compile and install the client / node with following commands:
 
@@ -180,7 +182,9 @@ Insert a USB drive, then:
 
 > mkdir /disk1
 
-> sudo fdisk -l      ** find an entry like /dev/sda1, could be different on your device **
+> sudo fdisk -l      
+
+** find an entry like /dev/sda1, could be different on your device **
 
 > sudo mount /dev/sda1 /disk1
 
@@ -189,6 +193,7 @@ Insert a USB drive, then:
 Add the following underneath the rows already present:
 
 > /dev/sda1       /disk1          auto    defaults          1       2
+
 Hit CTRL+X to save, Y to confirm and Enter
 
 > mv .solarcoin /home/pi/disk1
@@ -213,7 +218,9 @@ Insert (another if you followed option 9) USB drive:
 
 > mkdir /media/usb
 
-> sudo fdisk -l   ** find an entry like /dev/sdb1, could be different on your device **
+> sudo fdisk -l
+
+** find an entry like /dev/sdb1, could be different on your device **
 
 > sudo mount /dev/sdb1 /media/usb
 
@@ -266,6 +273,7 @@ CTRL X, Y and Enter to save
 > sudo systemctl start solarcoind.service
 
 > systemctl status solarcoind.service
+
 You should see an enabled service with a 'PID' number
 
 That is it; you now have a SolarCoin node on your Raspberry Pi.  You need to wait for the block-chain to sync, this may take several days!  If you forget a command solarcoind help is your best friend!
