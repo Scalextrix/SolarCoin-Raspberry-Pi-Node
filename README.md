@@ -102,6 +102,7 @@ c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
 > export CPATH="/usr/local/BerkeleyDB.4.8/include"
 
 > export LIBRARY_PATH="/usr/local/BerkeleyDB.4.8/lib"
+
 Note: the export commands are only valid in the current Terminal session. To avoid errors, don't close the Terminal until you fully completed with SolarCoin compilation.
 
 5- Clone the SolarCoin Github, compile and install the client / node with following commands:
@@ -109,6 +110,7 @@ Note: the export commands are only valid in the current Terminal session. To avo
 > cd
 
 > git clone https://github.com/onsightit/solarcoin.git
+
 NOTE: ** This will create a new directory /home/pi/solarcoin **
 
 > cd db-4.8.30.NC/build_unix
@@ -120,6 +122,7 @@ NOTE: ** This will create a new directory /home/pi/solarcoin **
 > cd solarcoin/src
 
 > sudo make -f makefile.unix
+
 NOTE: ** This is going to take a long time, go and make a cup of tea **
 
 > sudo strip solarcoind
@@ -142,6 +145,7 @@ NOTE  ** If you connected via SSH you may need to close the terminal and login a
 > cd .solarcoin
 
 > cat > solarcoin.conf
+
 Enter the following:
 
 > addnode=162.243.214.120
@@ -165,10 +169,12 @@ Hit CTRL+D to save the file:
 8- To check if SolarCoin is running:
 
 > solarcoind getinfo
+
 NOTE  ** If you see error: couldn't connect to server, don’t worry, it just means the program is still starting up, keep trying every 30 seconds until it works **
 
 9- OPTIONAL: Move the blockchain/wallet to a USB drive, recommended to reduce wear on the SD card:
-Insert a USB drive:
+
+Insert a USB drive, then:
 
 > solarcoind stop
 
@@ -179,6 +185,7 @@ Insert a USB drive:
 > sudo mount /dev/sda1 /disk1
 
 > sudo nano /etc/fstab
+
 Add the following underneath the rows already present:
 
 > /dev/sda1       /disk1          auto    defaults          1       2
@@ -193,12 +200,14 @@ Hit CTRL+X to save, Y to confirm and Enter
 10- IMPORTANT: Encrypt and back up your wallet and keep it on at least one other device!
 
 > solarcoind encryptwallet   **enter your secure passphrase here**
+
 ** NOTE: Never lose your passphrase or all your coins are lost, forever!  Never share your passphrase with anyone or they can steal your coins! Longer passphrases are more secure**
 
 > solarcoind walletpassphrase **enter your secure passphrase here** 9999999
 
 > solarcoind keypoolrefill 1000
-**NOTE: this will take some time, it gives you a bigger pool of ‘change addresses’, you should backup your wallet every 1000 transactions to prevent lost coins**
+
+**NOTE: this will take some time, it gives you a bigger pool of ‘change addresses’, you should backup your wallet every 900 transactions to prevent lost coins**
 
 Insert (another if you followed option 9) USB drive:
 
@@ -211,6 +220,7 @@ Insert (another if you followed option 9) USB drive:
 > solarcoind backupwallet /media/usb/wallet.dat
 
 > sudo umount /dev/sdb1
+
 Remove the USB drive
 
 11- Run SolarCoin as a service, this will ensure proper shutdown and startup, and will restart SolarCoin in case of failure
@@ -259,4 +269,3 @@ CTRL X, Y and Enter to save
 You should see an enabled service with a 'PID' number
 
 That is it; you now have a SolarCoin node on your Raspberry Pi.  You need to wait for the block-chain to sync, this may take several days!  If you forget a command solarcoind help is your best friend!
-
