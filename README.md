@@ -293,4 +293,4 @@ That is it; you now have a SolarCoin node on your Raspberry Pi.  You need to wai
 
 is your best friend!
 
-Any tips to my SLR address: 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK
+Any tips to my SLR address: 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK   Thanks
