@@ -144,10 +144,14 @@ NOTE: ** This is going to take a long time, go and make a cup of tea **
 
 > solarcoind
 
-NOTE  ** This will auto-create a new directory  /home/pi/.solarcoin  which will contain your wallet.dat and blockchain files ** 
+NOTE  ** This will auto-create a new directory  /home/pi/.solarcoin  which will contain your wallet.dat and blockchain files **
+
 NOTE  ** This is not the same as                /home/pi/solarcoin   that was created in step 5 **
+
 NOTE  ** When executing the next commands be careful to use the right one **
+
 NOTE  ** If you connected via SSH you may need to close the terminal and login again **
+
 
 7- You may get a warning and need to create a solarcoin.conf file, don’t worry:
 
@@ -288,3 +292,5 @@ That is it; you now have a SolarCoin node on your Raspberry Pi.  You need to wai
 > solarcoind help 
 
 is your best friend!
+
+Any tips to my SLR address: 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK
