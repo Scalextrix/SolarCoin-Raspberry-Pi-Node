@@ -191,9 +191,9 @@ Insert a USB drive, then:
 
 > solarcoind stop
 
-> sudo mkdir disk1
-
 > cd /media
+
+> sudo mkdir disk1
 
 > sudo fdisk -l      
 
