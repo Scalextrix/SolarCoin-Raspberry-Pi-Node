@@ -191,25 +191,29 @@ Insert a USB drive, then:
 
 > solarcoind stop
 
-> mkdir disk1
+> sudo mkdir disk1
+
+> cd /media
 
 > sudo fdisk -l      
 
 ** find an entry like /dev/sda1, could be different on your device **
 
-> sudo mount /dev/sda1 /disk1
+> sudo mount /dev/sda1 disk1
+
+> cd
 
 > sudo nano /etc/fstab
 
 Add the following underneath the rows already present:
 
-> /dev/sda1       /disk1          auto    defaults          1       2
+> /dev/sda1       /media/disk1          auto    defaults          1       2
 
 Hit CTRL+X to save, Y to confirm and Enter
 
-> mv .solarcoin /home/pi/disk1
+> mv .solarcoin /media/disk1
 
-> ln -s /home/pi/disk1/.solarcoin .solarcoin
+> ln -s /media/disk1/.solarcoin .solarcoin
 
 > solarcoind
 
@@ -227,7 +231,7 @@ Hit CTRL+X to save, Y to confirm and Enter
 
 Insert (another if you followed option 9) USB drive:
 
-> mkdir /media/usb
+> sudo mkdir /media/usb
 
 > sudo fdisk -l
 
