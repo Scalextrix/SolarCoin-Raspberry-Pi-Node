@@ -187,6 +187,8 @@ NOTE  ** If you see error: couldn't connect to server, don’t worry, it just me
 
 9- OPTIONAL: Move the blockchain/wallet to a USB drive, recommended to reduce wear on the SD card:
 
+NOTE  ** Users with a distro that has a desktop, you may find that when you insert a USB drive, this is automatically mounted, probably somewhere in /media, you should not follow this section 9 but check instructions for mounting and symlinking for your distro **
+
 Insert a USB drive, then:
 
 > solarcoind stop
