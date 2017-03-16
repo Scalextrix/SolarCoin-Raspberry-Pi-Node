@@ -23,7 +23,7 @@ To find out your version of Linux in command-line:
 1) Insert a clean new USB drive into your RPI3b
 ROKOS is a Jessie 8 variant and it has auto mounting of the USB drive.
 
-2) Note the folder by checking
+2) Note the folder by checking:
 
 
 >$cd /media/usb
@@ -32,17 +32,16 @@ ROKOS is a Jessie 8 variant and it has auto mounting of the USB drive.
 3) Backup your wallet.dat
 4) Go to:
 
-```
-$ cd /home/pi
-```
+>$ cd /home/pi
 
-5) Open
+
+5) Open:
 
 
 >$ cd .solarcoin/
 
 
-6) Update the solarcoin.conf by :
+6) Update the solarcoin.conf by:
 
 >$vi solarcoin.conf
  
@@ -52,7 +51,7 @@ then add the line
 >datadir=/media/usb/solarcoin
 
 
-press ESC and type :wq (you will see it written in the bottom) and hit ENTER
+Press ESC and type :wq (you will see it written in the bottom) and hit ENTER.
 
 7) Go to:
 
@@ -62,31 +61,24 @@ press ESC and type :wq (you will see it written in the bottom) and hit ENTER
 
 >$mkdir solarcoin
 
-9) Check it's there: in 
+9) Check it's there in:
 
 >$ /media/usb
 
-type
-
+type:
 
 >$ ls
 
-
-A solarcoin directory should be found as such
-
+A solarcoin directory should be found as such:
 
 >$ /media/usb
 >solarcoin
 
-
 10) Go to: 
-
 
 >$ cd /home/pi/.solarcoin
 
-
-11) Copy to move these folders to the USB device 
-
+11) Copy to move these folders to the USB device:
 
 >$ cp -Rf* /media/usb/solarcoin/
 
@@ -95,9 +87,7 @@ After making sure everything is copied overs you need to delete solarcoin.conf f
 >$cd /media/usb/solarcoin/
 >$rm solarcoin.conf
 
-
 12) Go back to /home/pi/.solarcoin and remove everything EXCEPT solarcoin.conf
-
 
 >$rm -R database
 >$rm db.log
@@ -106,21 +96,17 @@ After making sure everything is copied overs you need to delete solarcoin.conf f
 >$rm -R txleveldb
 >$rm wallet.dat**
 
-
 **---Please make sure you have a backup either in another zip folder or USB
 
 Check what's inside /home/pi/.solarcoin
-
 
 >$ls -a
 
 It would appear something like this in: /home/pi/.solarcoin:
 
-
 >. .. .lock solarcoin.conf
 
 12) Finally run the daemon
-
 
 >$ cd /usr/local/bin
 >solarcoind
