@@ -187,7 +187,7 @@ NOTE  ** If you see error: couldn't connect to server, don’t worry, it just me
 
 9- OPTIONAL: Move the blockchain/wallet to a USB drive, recommended to reduce wear on the SD card:
 
-NOTE  ** Users with a distro that has a desktop, you may find that when you insert a USB drive, this is automatically mounted, probably somewhere in /media, you may want to look at lpninjas instructions in StorageonUSBforROKOS.md as a better guide for this section **
+NOTE  ** Users with a distro that has a desktop, you may find that when you insert a USB drive, this is automatically mounted, probably somewhere in /media, you may want to look at lpninjas instructions in https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/StorageonUSBforROKOS.md as a better guide for this section **
 
 Insert a USB drive, then:
 
