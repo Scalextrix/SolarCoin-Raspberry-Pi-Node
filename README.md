@@ -267,6 +267,8 @@ Enter the following in the file:
 
 > Type=forking
 
+> PIDFile=/home/pi/.solarcoin/solarcoind.pid
+
 > RemainAfterExit=yes
 
 > ExecStart=/usr/local/bin/solarcoind
