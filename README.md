@@ -265,15 +265,15 @@ Enter the following in the file:
 
 > [Service]
 
-> Type=simple
+> Type=forking
 
 > RemainAfterExit=yes
 
 > ExecStart=/usr/local/bin/solarcoind
 
-> Restart=always
+> Restart=on-failure
 
-> RestartSec=60
+> RestartSec=3
 
 > User=pi
 
