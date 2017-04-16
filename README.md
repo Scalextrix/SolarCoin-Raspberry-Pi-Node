@@ -227,9 +227,6 @@ Hit CTRL+X to save, Y to confirm and Enter
 
 > solarcoind walletpassphrase **enter your secure passphrase here** 9999999
 
-> solarcoind keypoolrefill 1000
-
-**NOTE: this will take some time, it gives you a bigger pool of ‘change addresses’, you should backup your wallet every 900 transactions to prevent lost coins**
 
 Insert (another if you followed option 9) USB drive:
 
@@ -241,7 +238,9 @@ Insert (another if you followed option 9) USB drive:
 
 > sudo mount /dev/sdb1 /media/usb
 
-> solarcoind backupwallet /media/usb/wallet.dat
+> solarcoind backupwallet /home/pi/wallet.dat
+
+> sudo mv wallet.dat /media/usb/wallet.dat  ** you will see this message, dont worry "mv: failed to preserve ownership for ‘/media/usb/wallet.dat’: Operation not permitted" **
 
 > sudo umount /dev/sdb1
 
