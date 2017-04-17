@@ -83,8 +83,8 @@ So now you have 5 minutes (300 seconds) to issue the send coins command.  To sen
 Lets disect that for a moment; 'solarcoind' to send the instruction, 'sendtoaddress' to tell the 
 wallet you want to send coins, '8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK' is my wallet address, '1' is the
 amount of SLR to send.  When you hit return you will get a long string of numbers and letters, this
-is the transaction hash and lets you know it worked.  Also you could message me with this and I
-could see that you had sent the coins, useful as a proof of payment for example.
+is the transaction hash and lets you know it worked.  Also you could message me with the transaction hash and I
+could see that you had sent the coins; useful as a proof of payment for example.
 
 To lock a wallet:
 
