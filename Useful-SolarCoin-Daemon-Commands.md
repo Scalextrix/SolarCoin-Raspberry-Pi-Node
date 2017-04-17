@@ -7,6 +7,7 @@ Once you have your SolarCoin daemon running on an IoT device like a Raspberry Pi
 need a little help understanding how to use it.
 
 *General Monitoring*
+
 There are some useful commands to monitor your wallet:
 > solarcoind getinfo
 
@@ -40,6 +41,7 @@ If you arent sure use 'solarcoind getstakinginfo' to see if there is an amount o
 amount.  In the Receiving SolarCoin section below there is more info on checking/repairing the wallet.
 
 *Wallet; Locked, Staking, Unlocked*
+
 In the tutorial we used 'solarcoind encryptwallet your_passphrase_here' to secure the wallet with 
 a passphrase, this is to protect anyone except for you from controlling your wallet.
 When you start solarcoind, your wallet is always locked, this means you cant send coins anywhere, 
@@ -85,12 +87,17 @@ your wallet to send an amount, but we have '9999999' for the seconds and 'true' 
 So lets take the scenario where your wallet is unlocked for staking, and you want to transfer me that 1 SLR,
 you need to do:
 > solarcoind walletlock                                          *(your wallet was UNLOCKED for staking, so first you must lock it)*
+
 > solarcoind walletpassphrase your_passphrase_here 300           *(fully unlock for 5 minutes, to allow the transaction)*
+
 > solarcoind sendtoaddress 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK 1  *(send me 1 SLR)*
+
 > solarcoind walletlock                                          *(lock the wallet again, or you could just wait 5 minutes)*
+
 > solarcoind walletpassphrase your_passphrase_here 9999999 true  *(unlock the wallet for staking again)*
 
 *Receiving SolarCoin*
+
 Its often advisable to generate a new wallet address each time you do a transaction to help hide your 
 identity, if you ever want a new wallet address, simply:
 > solarcoind getnewaddress
@@ -110,6 +117,7 @@ or
 > solarcoind repairwallet
 
 *Backup your wallet regularly, no really, BACKUP YOUR WALLET REGULARLY!!*
+
 Finally, remember to keep regular backups of your wallet, if the SD card on your Pi fails, or if there is 
 some other failure ALL YOUR SOLARCOINS COULD BE LOST FOREVER, unless you have a recent backup, so ideally 
 keep one on at least one other offline device:
