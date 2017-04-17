@@ -64,7 +64,7 @@ amount.  In the Receiving SolarCoin section below there is more info on checking
 # Wallet; Locked, Staking, Unlocked
 
 In the tutorial we used 'solarcoind encryptwallet your_passphrase_here' to secure the wallet with 
-a passphrase, this is to protect anyone except for you from controlling your wallet.
+a passphrase, this is to prevent anyone except for you, from controlling your wallet.
 When you start solarcoind, your wallet is always locked, this means you cant send coins anywhere, 
 nor can you earn additional rewards by staking your coins.  If you wanted to send me 1 SolarCoin 
 (please dont feel obliged, its just an example!) you need to take multiple steps, first unlock the 
