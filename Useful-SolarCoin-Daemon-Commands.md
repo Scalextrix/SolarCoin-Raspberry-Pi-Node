@@ -155,5 +155,5 @@ or
 
 Finally, remember to keep regular backups of your wallet, if the SD card on your Pi fails, or if there is 
 some other failure ALL YOUR SOLARCOINS COULD BE LOST FOREVER, unless you have a recent backup, so ideally 
-keep one on at least one other offline device:
+keep 'wallet.dat' file at least one other offline device:
 > solarcoind backupwallet /destination/directory/of/your/choice
