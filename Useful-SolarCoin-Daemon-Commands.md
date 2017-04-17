@@ -9,6 +9,7 @@ need a little help understanding how to use it.
 *General Monitoring*
 There are some useful commands to monitor your wallet:
 > solarcoind getinfo
+
 This is a great general purpose query, it tells you most things like the software version, how 
 many coins you have spendable and how many are staking, how many blocks your node is sync'd to
 and how many peers you are connected to, what your IP address is and whether your wallet is 
@@ -16,19 +17,23 @@ unlocked.
 
 However its quite hard to read when you are new, so some more targeted queries may be useful:
 > solarcoind getblockcount
+
 Unsurprisingly tells you how many blocks your node is synchronized with.  You need to be sync'd 
 with the blockchain before spending coins or staking coins (receiving coins is unaffected).
 
 > solarcoind getpeerinfo
+
 Tells you more about the connections you have to peers on the network, if they are incoming or 
 outgoing.
 
 > solarcoind getstakinginfo
+
 Tells you if your wallet is unlocked for staking (see below) and if it is actually staking 
 (both entries should be True), a reason you may be unlocked for staking but not actually staking 
 is if you are not sync'd to the blockchain.
 
 > solarcoind getbalance
+
 Shows you your AVAILABLE (Spendable) balance, if the amount seems too low note that any amounts 
 that are locked due to them staking are not shown. 
 If you arent sure use 'solarcoind getstakinginfo' to see if there is an amount of coins in the stake 
@@ -42,6 +47,7 @@ nor can you earn additional rewards by staking your coins.  If you wanted to sen
 (please dont feel obliged, its just an example!) you could do:
 
 > solarcoind walletpassphrase your_passphrase_here 300
+
 Lets disect that for a moment; 'solarcoind' is the way to issue any command to SolarCoin, 
 'walletpassphrase' tells the wallet you want to unlock the wallet 'your_passphrase_here' is 
 whatever you chose as your passphrase '300' is the number of seconds to unlock the wallet for,
@@ -49,6 +55,7 @@ after which it will become locked again.  So now you have 5 minutes to send the 
 
 To send the coins:
 > solarcoind sendtoaddress 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK 1
+
 Lets disect that for a moment; 'solarcoind' to send the instruction, 'sendtoaddress' to tell the 
 wallet you want to send coins, '8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK' is my wallet address, '1' is the
 amount of SLR to send.  When you hit return you will get a long string of numbers and letters, this
@@ -58,9 +65,11 @@ could see that you had sent the coins, useful as a proof of payment for example.
 To lock a wallet:
 Lets say you accidentally did:
 > solarcoind walletpassphrase your_passphrase_here 30000
+
 Now your wallet is open for a long time (30000 seconds), and for security you want to lock it again
 before the time expires, just do:
 > solarcoind walletlock
+
 Thats it, 'walletlock' locks the wallet, easy.
 
 There is an intermediate state of the wallet, that is used for staking your coins (earning 
@@ -68,6 +77,7 @@ interest on them), the wallet is unlocked, but ONLY for staking, no other transa
 You will probably want to leave your wallet in this state most of the time to earn interest.
 The command is:
 > solarcoind walletpassphrase your_passphrase_here 9999999 true
+
 Lets disect that: 'solarcoind walletpassphrase your_passphrase_here' is exacly the same as fully unlocking
 your wallet to send an amount, but we have '9999999' for the seconds and 'true' at the end.  
 '9999999' seconds effectively means forever, and the 'true' means unlock the wallet, but for staking only.
@@ -88,12 +98,14 @@ identity, if you ever want a new wallet address, simply:
 If you want to see a list of existing addresses, its a bit more complicated and is really much easier in a 
 Qt wallet with coin control features, but you can issue command:
 > solarcoind listunspent
+
 it will show you batches of coins, numbers of confirmations and the addresses which they are associated to, 
 its not easy to read though.
 
 Sometimes you might need to repair the wallet, the reasons for this are complex, but if you suddenly notice
 your balances seem wrong you can try
 > solarcoind checkwallet
+
 or
 > solarcoind repairwallet
 
