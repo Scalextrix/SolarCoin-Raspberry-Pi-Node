@@ -157,7 +157,7 @@ NOTE  ** If you connected via SSH you may need to close the terminal and login a
 
 > cd .solarcoin
 
-> cat > solarcoin.conf
+> sudo nano solarcoin.conf
 
 Enter the following:
 
@@ -173,7 +173,7 @@ Enter the following:
 
 > listen=1            ** if you want a fullnode that listens for connections **
 
-Hit CTRL+D to save the file:
+Hit CTRL+X, Y and Enter to save the file:
 
 > cd
 
