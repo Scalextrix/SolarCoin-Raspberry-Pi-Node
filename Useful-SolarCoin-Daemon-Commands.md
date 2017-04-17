@@ -115,7 +115,7 @@ you need to do:
 
 # Receiving SolarCoin
 
-Its often advisable to generate a new wallet address each time you do a transaction to help hide your 
+Its often advisable to generate a new wallet address each time you receive some from a new person to help hide your 
 identity, if you ever want a new wallet address, simply:
 > solarcoind getnewaddress
 
