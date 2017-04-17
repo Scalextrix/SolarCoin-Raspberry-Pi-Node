@@ -60,7 +60,7 @@ Lets disect that for a moment; 'solarcoind' is the way to issue any command to S
 whatever you chose as your passphrase, '300' is the number of seconds to unlock the wallet for,
 after which it will become locked again.  
 
-So now you have 5 minutes (300 seconds) to send the coins to me.  To send the coins:
+So now you have 5 minutes (300 seconds) to issue the send coins command.  To send the coins:
 > solarcoind sendtoaddress 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK 1
 
 Lets disect that for a moment; 'solarcoind' to send the instruction, 'sendtoaddress' to tell the 
