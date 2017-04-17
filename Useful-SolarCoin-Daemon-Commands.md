@@ -6,6 +6,8 @@ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WIT
 Once you have your SolarCoin daemon running on an IoT device like a Raspberry Pi, you might 
 need a little help understanding how to use it.
 
+
+
 *General Monitoring*
 
 There are some useful commands to monitor your wallet:
@@ -40,22 +42,25 @@ that are locked due to them staking are not shown.
 If you arent sure use 'solarcoind getstakinginfo' to see if there is an amount of coins in the stake 
 amount.  In the Receiving SolarCoin section below there is more info on checking/repairing the wallet.
 
+
+
 *Wallet; Locked, Staking, Unlocked*
 
 In the tutorial we used 'solarcoind encryptwallet your_passphrase_here' to secure the wallet with 
 a passphrase, this is to protect anyone except for you from controlling your wallet.
 When you start solarcoind, your wallet is always locked, this means you cant send coins anywhere, 
 nor can you earn additional rewards by staking your coins.  If you wanted to send me 1 SolarCoin 
-(please dont feel obliged, its just an example!) you could do:
+(please dont feel obliged, its just an example!) you neet to take multiple steps, first unlock the 
+wallet:
 
 > solarcoind walletpassphrase your_passphrase_here 300
 
 Lets disect that for a moment; 'solarcoind' is the way to issue any command to SolarCoin, 
-'walletpassphrase' tells the wallet you want to unlock the wallet 'your_passphrase_here' is 
-whatever you chose as your passphrase '300' is the number of seconds to unlock the wallet for,
-after which it will become locked again.  So now you have 5 minutes to send the coins to me.
+'walletpassphrase' tells the wallet you want to unlock the wallet, 'your_passphrase_here' is 
+whatever you chose as your passphrase, '300' is the number of seconds to unlock the wallet for,
+after which it will become locked again.  
 
-To send the coins:
+So now you have 5 minutes (300 seconds) to send the coins to me.  To send the coins:
 > solarcoind sendtoaddress 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK 1
 
 Lets disect that for a moment; 'solarcoind' to send the instruction, 'sendtoaddress' to tell the 
@@ -65,6 +70,7 @@ is the transaction hash and lets you know it worked.  Also you could message me 
 could see that you had sent the coins, useful as a proof of payment for example.
 
 To lock a wallet:
+
 Lets say you accidentally did:
 > solarcoind walletpassphrase your_passphrase_here 30000
 
@@ -86,15 +92,23 @@ your wallet to send an amount, but we have '9999999' for the seconds and 'true' 
 
 So lets take the scenario where your wallet is unlocked for staking, and you want to transfer me that 1 SLR,
 you need to do:
-> solarcoind walletlock                                          *(your wallet was UNLOCKED for staking, so first you must lock it)*
+> solarcoind walletlock
 
-> solarcoind walletpassphrase your_passphrase_here 300           *(fully unlock for 5 minutes, to allow the transaction)*
+*(your wallet was UNLOCKED for staking, so first you must lock it)*
+> solarcoind walletpassphrase your_passphrase_here 300
 
-> solarcoind sendtoaddress 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK 1  *(send me 1 SLR)*
+*(fully unlock for 5 minutes, to allow the transaction)*
+> solarcoind sendtoaddress 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK 1
 
-> solarcoind walletlock                                          *(lock the wallet again, or you could just wait 5 minutes)*
+*(send me 1 SLR)*
+> solarcoind walletlock
 
-> solarcoind walletpassphrase your_passphrase_here 9999999 true  *(unlock the wallet for staking again)*
+*(lock the wallet again, or you could just wait 5 minutes)*
+> solarcoind walletpassphrase your_passphrase_here 9999999 true  
+
+*(unlock the wallet for staking again)*
+
+
 
 *Receiving SolarCoin*
 
@@ -115,6 +129,8 @@ your balances seem wrong you can try
 
 or
 > solarcoind repairwallet
+
+
 
 *Backup your wallet regularly, no really, BACKUP YOUR WALLET REGULARLY!!*
 
