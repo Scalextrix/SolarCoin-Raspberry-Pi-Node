@@ -8,7 +8,7 @@ need a little help understanding how to use it.
 
 
 
-*General Monitoring*
+#General Monitoring
 
 There are some useful commands to monitor your wallet:
 > solarcoind getinfo
@@ -44,7 +44,7 @@ amount.  In the Receiving SolarCoin section below there is more info on checking
 
 
 
-*Wallet; Locked, Staking, Unlocked*
+#Wallet; Locked, Staking, Unlocked
 
 In the tutorial we used 'solarcoind encryptwallet your_passphrase_here' to secure the wallet with 
 a passphrase, this is to protect anyone except for you from controlling your wallet.
@@ -110,7 +110,7 @@ you need to do:
 
 
 
-*Receiving SolarCoin*
+#Receiving SolarCoin
 
 Its often advisable to generate a new wallet address each time you do a transaction to help hide your 
 identity, if you ever want a new wallet address, simply:
@@ -132,7 +132,7 @@ or
 
 
 
-*Backup your wallet regularly, no really, BACKUP YOUR WALLET REGULARLY!!*
+#Backup your wallet regularly, no really, BACKUP YOUR WALLET REGULARLY!!
 
 Finally, remember to keep regular backups of your wallet, if the SD card on your Pi fails, or if there is 
 some other failure ALL YOUR SOLARCOINS COULD BE LOST FOREVER, unless you have a recent backup, so ideally 
