@@ -32,7 +32,7 @@ outgoing.
 > solarcoind getstakinginfo
 
 Tells you if your wallet is unlocked for staking (see below) and if it is actually staking 
-(both entries should be True), a reason you may be unlocked for staking but not actually staking 
+(both the "Enabled" and "Staking" entries should be True), a reason you may be unlocked for staking but not actually staking 
 is if you are not sync'd to the blockchain.
 
 > solarcoind getbalance
@@ -107,6 +107,9 @@ you need to do:
 > solarcoind walletpassphrase your_passphrase_here 9999999 true  
 
 *(unlock the wallet for staking again)*
+> solarcoind getstakinginfo
+
+*(just to check you are back to staking)*
 
 
 
