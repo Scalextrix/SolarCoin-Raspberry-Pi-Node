@@ -9,7 +9,7 @@ need a little help understanding how to use it.
 # The Basics
 
 To start the SolarCoin daemon:
-> solarcoin
+> solarcoind
 
 To stop the SolarCoin daemon:
 > solarcoind stop
