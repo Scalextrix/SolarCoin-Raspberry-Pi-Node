@@ -298,7 +298,7 @@ That is it; you now have a SolarCoin node on your Raspberry Pi.  You need to wai
 
 > solarcoind help 
 
-is your best friend!
+is useful, or see https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Useful-SolarCoin-Daemon-Commands.md
 
 ** Once the block-chain is synced, its advisable to keep regular backups (I do mine monthly) of the SD card image, in this way if you have a hardware or software problem you will be able to get back up and running quickly without re-installing everything, here is a guide:  https://lifehacker.com/how-to-clone-your-raspberry-pi-sd-card-for-super-easy-r-1261113524 **
 
