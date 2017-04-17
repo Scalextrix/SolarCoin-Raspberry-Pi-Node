@@ -6,7 +6,25 @@ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WIT
 Once you have your SolarCoin daemon running on an IoT device like a Raspberry Pi, you might 
 need a little help understanding how to use it.
 
+# The Basics
 
+To start the SolarCoin daemon:
+> solarcoin
+
+To stop the SolarCoin daemon:
+> solarcoind stop
+
+If you followed Section 11 and created a service, you may also:
+> sudo systemctl start solarcoind.service
+
+and 
+> sudo systemctl stop solarcoind.service
+
+This is useful if you wanted to disable the service (for example if you wanted to prevent SolarCoin starting at power on)
+> sudo systemctl disable solarcoind.service
+
+And to enable it again
+> sudo systemctl enable solarcoind.service
 
 # General Monitoring
 
