@@ -102,7 +102,7 @@ c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
 
 > cd db-4.8.30.NC/build_unix
 
-> sudo ../dist/configure --enable-cxx
+> sudo ../dist/configure --enable-cxx --disable-shared
 
 > sudo make
 
@@ -124,7 +124,7 @@ NOTE: ** This will create a new directory /home/pi/solarcoin **
 
 > cd db-4.8.30.NC/build_unix
 
-> sudo ../dist/configure --prefix=/usr/local --enable-cxx
+> sudo ../dist/configure --prefix=/usr/local --enable-cxx --disable-shared
 
 > cd
 
@@ -171,7 +171,7 @@ Enter the following:
 
 > rpcpassword=        ** enter a secure password **
 
-> listen=1            ** if you want a fullnode that listens for connections **
+> listen=1            ** if you want a fullnode that listens for connections, you will need to enable port forwarding on your router on port 11818 as we have not complied for UPNP **
 
 Hit CTRL+X, Y and Enter to save the file:
 
