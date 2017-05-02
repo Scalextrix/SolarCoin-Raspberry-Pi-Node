@@ -171,7 +171,7 @@ Enter the following:
 
 > rpcpassword=        ** enter a secure password **
 
-> listen=1            ** if you want a fullnode that listens for connections, you will need to enable port forwarding on your router on port 11818 as we have not complied for UPNP **
+> listen=1            ** if you want a fullnode that listens for connections, you will need to enable port forwarding on your router on port 18188 as we have not complied for UPNP **
 
 Hit CTRL+X, Y and Enter to save the file:
 
