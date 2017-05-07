@@ -139,10 +139,15 @@ NOTE: ** This is going to take a long time, go and make a cup of tea **
 > hardening-check solarcoind
 
 ** The output should look like:
+
  Position Independent Executable: yes
+ 
  Stack protected: yes
+ 
  Fortify Source functions: yes (some protected functions found)
+ 
  Read-only relocations: yes
+ 
  Immediate binding: yes**
 
 > sudo install -m 755 solarcoind /usr/local/bin/solarcoind
