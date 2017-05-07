@@ -92,7 +92,7 @@ You can check the new active swap size with next command:
 
 b- Install Required Dependencies with next commands:
 
-> sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev libdb-dev libdb4.8++ libdb5.3++-dev git -y
+> sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev libdb-dev libdb4.8++ libdb5.3++-dev git hardening-includes -y
 
 c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
 
@@ -130,11 +130,20 @@ NOTE: ** This will create a new directory /home/pi/solarcoin **
 
 > cd solarcoin/src
 
-> sudo make -f makefile.unix
+> sudo make -f makefile.unix -e PIE=1
 
 NOTE: ** This is going to take a long time, go and make a cup of tea **
 
 > sudo strip solarcoind
+
+> hardening-check solarcoind
+
+** The output should look like:
+ Position Independent Executable: yes
+ Stack protected: yes
+ Fortify Source functions: yes (some protected functions found)
+ Read-only relocations: yes
+ Immediate binding: yes**
 
 > sudo install -m 755 solarcoind /usr/local/bin/solarcoind
 
