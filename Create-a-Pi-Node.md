@@ -94,7 +94,9 @@ b- Install Required Dependencies with next commands:
 
 > sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev libdb-dev libdb4.8++ libdb5.3++-dev git hardening-includes rng-tools -y
 
-> sudo reboot  ** If you are on SSH you will lose connection, log back in to continue **
+> sudo reboot  
+
+** If you are on SSH you will lose connection, log back in to continue **
 
 c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
 
