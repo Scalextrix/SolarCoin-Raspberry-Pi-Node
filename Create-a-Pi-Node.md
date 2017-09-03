@@ -94,6 +94,16 @@ b- Install Required Dependencies with next commands:
 
 > sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev libdb-dev libdb4.8++ libdb5.3++-dev git hardening-includes rng-tools -y
 
+We installed rng-tools to give us really good random number generation entropy, we just need to make one change to the configuration file
+
+> sudo nano /etc/default/rng-tools
+
+In the file uncomment (remove the # symbol) from this line
+
+HRNGDEVICE=/dev/hwrng
+
+CTRL+X, Enter & Y to save
+
 > sudo reboot  
 
 ** If you are on SSH you will lose connection, log back in to continue **
