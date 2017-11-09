@@ -8,7 +8,7 @@ IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
 OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH USE OR OTHER DEALINGS.
 
-1 - THIS GUIDE ONLY WORKS ON RASPBIAN JESSIE, LITE DOWNLOADS AVAILABLE FROM https://downloads.raspberrypi.org/raspbian_lite/images/
+1 - THIS GUIDE ONLY WORKS ON RASPBIAN JESSIE, LITE DOWNLOADS AVAILABLE FROM https://downloads.raspberrypi.org/raspbian_lite/images/ make sure and use the version dated 2017-07-05
 
 You will need to be able to open the command line Terminal either using a screen on the HDMI port with a keyboard and mouse, or via SSH.  The guide will compile a version of SolarCoin that can only be controlled via the command line.
 
