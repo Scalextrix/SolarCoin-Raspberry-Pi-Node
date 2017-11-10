@@ -134,6 +134,10 @@ c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
 
 > git clone https://github.com/onsightit/solarcoin.git
 
+> cd solarcoin
+
+> git checkout c97373dd89ada90da5add4312974763a86071ad2
+
 NOTE: ** This will create a new directory /home/pi/solarcoin **
 
 > cd db-4.8.30.NC/build_unix
