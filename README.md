@@ -10,4 +10,4 @@ You may wish to download solarcoin_RPC.py to make using the solarcoin daemon eas
 
 > sudo chmod +x solarcoin_RPC.py
 
-> solarcoin_RPC.py
+> ./solarcoin_RPC.py
