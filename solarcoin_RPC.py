@@ -38,7 +38,7 @@ def command_chooser():
         print 'Type "send" to send funds: you will need to know the wallet address and amount'
         print '*TIP: you will need to UNLOCK first if the wallet is LOCKED or UNLOCKED for STAKING'
         print ''
-        print 'Type "staking" to indefinately unlock the wallet for staking: you will subsequently be asked for the passphrase
+        print 'Type "staking" to indefinately unlock the wallet for staking: you will subsequently be asked for the passphrase'
         print '*TIP: you may need to LOCK the wallet if it is already UNLOCKED*'
         return command_chooser()
     else:
