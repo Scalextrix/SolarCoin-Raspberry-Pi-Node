@@ -21,7 +21,7 @@ On a Raspberry PI:
 
 For a Windows machine you should install Python 2.7 https://www.python.org/downloads/release/python-2714/.
 
-Once installed you will need to get Python requests, you may want to install pip if its not part of the python install.
+Once installed you will need to get Python requests,  to make installing easier you may want to install pip if its not part of the python install.  Once done you can get requests as follows:
 
 > python -m pip install requests
 
