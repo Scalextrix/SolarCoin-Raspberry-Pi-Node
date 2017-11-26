@@ -16,7 +16,7 @@ import sys
 import time
 
 def command_chooser():
-	command_choice = raw_input('Issue a command, "help" or blank to exit: ').lower()
+	command_choice = raw_input('Issue a command, "help" or "exit" to exit: ').lower()
 	if command_choice == 'lock':
 		return lock_wallet()
 	elif command_choice == 'send':
@@ -31,6 +31,8 @@ def command_chooser():
 		return info()
 	elif command_choice == 'stakinginfo':
 		return stakinginfo()
+	elif command_choice == 'balance':
+		return balance()
 	elif command_choice == 'help':
 		print 'Here is the list of available commands:'
 		print ''
@@ -51,30 +53,45 @@ def command_chooser():
 		print ''
 		print 'Type "info" to see basic information about your node'
 		print ''
-		print 'Type "stakinginfo" to see if you are staking'
+		print 'Type "balance" to see the total SLR in your wallet'
+		print ''
+		print 'Type "stakinginfo" to see if this node is staking'
 		print '*TIP: if this node is staking the output should read Enabled: true and Staking: true'
 		print '**TIP: If Enabled: false then Type "staking" to UNLOCK for STAKING'
-		print '***TIP:: If Staking: false then check if you are fully synced to the blockchain, Type "blocks"'         
+		print '***TIP:: If Staking: false then check if you are fully synced to the blockchain, Type "blocks"'
+		print ''
 		return command_chooser()
-	else:
-		print 'EXITING: Command not recognised'
+	elif command_choice == 'exit':
+		print 'Exiting'
 		time.sleep(10)
 		sys.exit()
+	else:
+		print 'Command not recognised, perhaps use "help" for list of available commands'
+		return command_chooser()
 
 def blocks():
 	method = "getblockcount"
 	params = []
-	return {'method':method, 'params':params}
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}
+
+def balance():
+	method = "getinfo"
+	params = []
+	modifier = "balance"
+	return {'method':method, 'params':params, 'modifier':modifier}
 
 def info():
 	method = "getinfo"
 	params = []
-	return {'method':method, 'params':params}
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}
         
 def stakinginfo():
 	method = "getstakinginfo"
 	params = []
-	return {'method':method, 'params':params}
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}
 
 def instruct_wallet(ip_choice, command, command_chooser):
 	payload = json.dumps({"method": command['method'], "params": command['params']})
@@ -88,7 +105,13 @@ def instruct_wallet(ip_choice, command, command_chooser):
 	answer = json.loads(response.text)
 	if answer['error'] == None:
 		print 'Command Executed Successfully!'
-		if answer['result'] != None:
+		if command['method'] == 'getinfo' and command['modifier'] == 'balance' and answer['result'] != None:
+			print '{'
+			print '"balance": {},'.format(json.dumps(answer['result']['balance']))
+			print '"stake": {},'.format(json.dumps(answer['result']['stake']))
+			print '"total": {}'.format(float(json.dumps(answer['result']['balance']))+float(json.dumps(answer['result']['stake'])))
+			print '}'
+		elif answer['result'] != None:
 			print json.dumps(answer['result'], sort_keys=True, indent=4, separators=(',', ': '))
 	else:
 		print answer['error']['message']
@@ -98,27 +121,31 @@ def instruct_wallet(ip_choice, command, command_chooser):
 def lock_wallet():
 	method = "walletlock"
 	params = []
-	return {'method':method, 'params':params}
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}
 
 def send():
 	method = "sendtoaddress"
 	address = raw_input('Send SLR to which address: ')
 	amount = float(raw_input('How much SLR to send: '))
 	params = [address, amount]
-	return {'method':method, 'params':params}
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}
 
 def staking_wallet():
 	passphrase = getpass.getpass(prompt="What is your SolarCoin Wallet Passphrase: ")
 	method = "walletpassphrase"
 	params = [passphrase, 9999999, True]
-	return {'method':method, 'params':params}
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}
 
 def unlock_wallet():
 	passphrase = getpass.getpass(prompt="What is your SolarCoin Wallet Passphrase: ")
 	unlock_time = int(raw_input('unlock for how many seconds: '))
 	method = "walletpassphrase"
 	params = [passphrase, unlock_time]
-	return {'method':method, 'params':params}
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}
 
 if os.name == 'nt':
 	user_account = getpass.getuser()
