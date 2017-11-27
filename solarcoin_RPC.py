@@ -21,6 +21,8 @@ def command_chooser():
 		return lock_wallet()
 	elif command_choice == 'send':
 		return send()
+	elif command_choice == 'newaddress':
+		return new_address()
 	elif command_choice == 'staking':
 		return staking_wallet()
 	elif command_choice == 'unlock':
@@ -30,7 +32,7 @@ def command_chooser():
 	elif command_choice == 'info':
 		return info()
 	elif command_choice == 'stakinginfo':
-		return stakinginfo()
+		return staking_info()
 	elif command_choice == 'balance':
 		return balance()
 	elif command_choice == 'help':
@@ -54,6 +56,8 @@ def command_chooser():
 		print 'Type "info" to see basic information about your node'
 		print ''
 		print 'Type "balance" to see the total SLR in your wallet'
+		print ''
+		print 'Type "newaddress" to get a new wallet address for receiving SLR'
 		print ''
 		print 'Type "stakinginfo" to see if this node is staking'
 		print '*TIP: if this node is staking the output should read Enabled: true and Staking: true'
@@ -86,8 +90,14 @@ def info():
 	params = []
 	modifier = ""
 	return {'method':method, 'params':params, 'modifier':modifier}
-        
-def stakinginfo():
+
+def new_address():
+	method = "getnewaddress"
+	params = []
+	modifier = ""
+	return {'method':method, 'params':params, 'modifier':modifier}        
+
+def staking_info():
 	method = "getstakinginfo"
 	params = []
 	modifier = ""
