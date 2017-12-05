@@ -7,9 +7,9 @@ You may wish to download solarcoin_RPC.py to make using the solarcoin daemon eas
 Dependencies: requests
 
 The solarcoin.conf file must have the following entries:
-> rpcuser=(insert a username if one isnt already present)
+> rpcuser=insert_a_username_if_one_isnt_already_present
 
-> rpcpassword=(insert a password if one isnt already present)
+> rpcpassword=insert_a_password_if_one_isnt_already_present
 
 > daemon=1
 
