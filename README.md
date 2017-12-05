@@ -8,8 +8,11 @@ Dependencies: requests
 
 The solarcoin.conf file must have the following entries:
 > rpcuser=(insert a username if one isnt already present)
+
 > rpcpassword=(insert a password if one isnt already present)
+
 > daemon=1
+
 > server=1
 
 On a Raspberry PI:
