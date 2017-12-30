@@ -94,7 +94,11 @@ Reduce the 'swappiness' so as to only use SWAP when absolutely needed:
 
 > sudo nano /etc/sysctl.conf
 
-add swappiness=1 as the last line then CTRL+X, Y and Enter to save.
+add 
+
+> vm.swappiness=1 
+
+as the last line then CTRL+X, Y and Enter to save.
 
 b- Install Required Dependencies with next commands:
 
