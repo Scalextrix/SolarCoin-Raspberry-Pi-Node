@@ -90,6 +90,12 @@ You can check the new active swap size with next command:
 
 > free -m
 
+Reduce the 'swappiness' so as to only use SWAP when absolutely needed:
+
+> sudo nano /etc/sysctl.conf
+
+add swappiness=1 as the last line then CTRL+X, Y and Enter to save.
+
 b- Install Required Dependencies with next commands:
 
 > sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev libdb-dev libdb4.8++ libdb5.3++-dev git hardening-includes rng-tools -y
@@ -108,26 +114,6 @@ CTRL+X, Enter & Y to save
 
 ** If you are on SSH you will lose connection, log back in to continue **
 
-c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
-
-> wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
-
-> sudo tar -xzvf db-4.8.30.NC.tar.gz
-
-> cd db-4.8.30.NC/build_unix
-
-> sudo ../dist/configure --enable-cxx --disable-shared
-
-> sudo make
-
-> sudo make install
-
-> export CPATH="/usr/local/BerkeleyDB.4.8/include"
-
-> export LIBRARY_PATH="/usr/local/BerkeleyDB.4.8/lib"
-
-** NOTE: the export commands are only valid in the current Terminal session. To avoid errors, don't close the Terminal until you fully completed with SolarCoin compilation. **
-
 5- Clone the SolarCoin Github, compile and install the client / node with following commands:
 
 > cd
@@ -139,12 +125,6 @@ c- Compile and Install BerkeleyDB 4.8.30 by running the following commands:
 > git checkout c97373dd89ada90da5add4312974763a86071ad2
 
 NOTE: ** This will create a new directory /home/pi/solarcoin **
-
-> cd db-4.8.30.NC/build_unix
-
-> sudo ../dist/configure --prefix=/usr/local --enable-cxx --disable-shared
-
-> cd
 
 > cd solarcoin/src
 
