@@ -141,7 +141,7 @@ NOTE: ** This is going to take a long time, go and make a cup of tea **
 
 > sudo install -m 755 solarcoin-qt /usr/local/bin/solarcoin-qt
 
-> cd
+You are done with the terminal window, and can close it, if you are on SSH you now need to start the desktop environment.
 
 6- Start the SolarCoin-Qt by going to the main menu and opening the Run command:
 
