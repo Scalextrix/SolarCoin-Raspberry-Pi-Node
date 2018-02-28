@@ -10,7 +10,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH USE OR OTHER DEALINGS.
 
 1 - THIS GUIDE WORKS ON RASPBIAN STRETCH, DOWNLOADS AVAILABLE FROM https://downloads.raspberrypi.org/
 
-You will need to be able to open the command line Terminal either using a screen on the HDMI port with a keyboard and mouse, or via SSH.  The guide will compile a version of SolarCoin that can only be controlled via the command line.
+You will need to be able to open the command line Terminal either using a screen on the HDMI port with a keyboard and mouse, or via SSH.  The guide will compile a version of SolarCoin that has a GUI interface via desktop environment.
 
 For instructions on how to flash an SD card: https://www.raspberrypi.org/documentation/installation/installing-images/
 
