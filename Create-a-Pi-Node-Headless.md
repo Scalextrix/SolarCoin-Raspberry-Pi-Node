@@ -1,4 +1,4 @@
-# SolarCoin-Raspberry-Pi-Node
+# Headless-SolarCoin-Raspberry-Pi-Node
 Instructions to build a SolarCoin full node on Raspberry Pi, for future proofing SBCs with higher RAM may be needed, for a Rock64 install see https://github.com/jegb/solarcoin-legacy/wiki/Rock64-node
 
 PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
