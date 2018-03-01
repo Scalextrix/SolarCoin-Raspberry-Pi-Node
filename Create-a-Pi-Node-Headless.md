@@ -178,9 +178,13 @@ NOTE  ** If you connected via SSH you may need to close the terminal and login a
 Enter the following:
 
 > addnode=162.243.214.120
+
 > addnode=139.162.244.34
+
 > addnode=88.198.92.47
+
 > addnode=scalextrixsolarcoin.ddns.net
+
 > addnode=nlsolarcoin.ddns.net
 
 > server=1
