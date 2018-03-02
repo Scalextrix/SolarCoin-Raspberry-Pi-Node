@@ -133,6 +133,8 @@ make the line so it reads
 
 CTRL+X, Y and ENTER to save the changes
 
+> cd solarcoin-legacy
+
 > qmake -qt=qt5
 
 > make
