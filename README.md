@@ -2,7 +2,7 @@
 
 If you use the [GUI-Create-a-Pi-Node.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/GUI-Create-Raspberry-Pi-Node.md#gui-solarcoin-raspberry-pi-node) you dont need this set of instructions.  This is recommended for novice users.
 
-However if you want a headless node and use [Create-a-Pi-Node-Headless.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Create-a-Pi-Node-Headless.md#headless-solarcoin-raspberry-pi-node) you can read [Useful-SolarCoin-Daemon-Commands.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Useful-SolarCoin-Daemon-Commands.md#the-basics)
+However if you want a headless node and use [Create-a-Pi-Node-Headless.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Create-a-Pi-Node-Headless.md#headless-solarcoin-raspberry-pi-node) you can read [Useful-SolarCoin-Daemon-Commands.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Useful-SolarCoin-Daemon-Commands.md#the-basics) to assist you in controllong the wallet from command line.
 
 You may wish to download solarcoin_RPC.py to make using the solarcoin healess version easier, if so:
 
