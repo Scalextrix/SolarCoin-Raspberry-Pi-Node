@@ -1,6 +1,6 @@
 # Useful files for installing and controlling a SolarCoin node on Raspberry Pi or other SBC (Single Board Computer)
 
-If you use the (GUI-Create-a-Pi-Node.md)[https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Create-a-Pi-Node-Headless.md#headless-solarcoin-raspberry-pi-node] you dont need this set of instructions.
+If you use the [GUI-Create-a-Pi-Node.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Create-a-Pi-Node-Headless.md#headless-solarcoin-raspberry-pi-node) you dont need this set of instructions.
 
 However if you want a headless node and use Create-a-Pi-Node-Headless.md you can read Useful-SolarCoin-Daemon-Commands.md
 
