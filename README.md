@@ -1,8 +1,8 @@
 # Useful files for installing and controlling a SolarCoin node on Raspberry Pi or other SBC (Single Board Computer)
 
-If you use the [GUI-Create-a-Pi-Node.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Create-a-Pi-Node-Headless.md#headless-solarcoin-raspberry-pi-node) you dont need this set of instructions.
+If you use the [GUI-Create-a-Pi-Node.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/GUI-Create-Raspberry-Pi-Node.md#gui-solarcoin-raspberry-pi-node) you dont need this set of instructions.
 
-However if you want a headless node and use Create-a-Pi-Node-Headless.md you can read Useful-SolarCoin-Daemon-Commands.md
+However if you want a headless node and use [Create-a-Pi-Node-Headless.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Create-a-Pi-Node-Headless.md#headless-solarcoin-raspberry-pi-node) you can read [Useful-SolarCoin-Daemon-Commands.md](https://github.com/Scalextrix/SolarCoin-Raspberry-Pi-Node/blob/master/Useful-SolarCoin-Daemon-Commands.md#the-basics)
 
 You may wish to download solarcoin_RPC.py to make using the solarcoin healess version easier, if so:
 
