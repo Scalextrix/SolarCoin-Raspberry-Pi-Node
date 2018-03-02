@@ -2,9 +2,9 @@
 
 If you use the Gui-Create-a-Pi-Node.md you dont need this set of instructions.
 
-After reading the installation guide (Create-a-Pi-Node-Headless.md) you should read Useful-SolarCoin-Daemon-Commands.md
+However if you want a headless node and use Create-a-Pi-Node-Headless.md you can read Useful-SolarCoin-Daemon-Commands.md
 
-You may wish to download solarcoin_RPC.py to make using the solarcoin daemon easier.
+You may wish to download solarcoin_RPC.py to make using the solarcoin healess version easier, if so:
 
 Dependencies: requests
 
