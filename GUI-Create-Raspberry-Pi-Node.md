@@ -151,6 +151,28 @@ You are done with the terminal window, and can close it, if you are on SSH you n
 
 NOTE: Allow the wallet to sync slowly, do NOT use the block-chain snapshot
 
+If you have any problems getting connections (you may want to do this anyway):
+
+> cd
+
+> nano .solarcoin/solarcoin.conf
+
+Then add the following:
+
+> addnode=162.243.214.120
+
+> addnode=139.162.244.34
+
+> addnode=88.198.92.47
+
+> addnode=nlsolarcoin.ddns.net
+
+> addnode=scalextrixsolarcoin.ddns.net
+
+> addnode=94.124.215.192
+
+CTRL+x, then y and Enter to save, now restart solarcoin-qt
+
 ** Once the block-chain is synced, its advisable to keep regular backups (I do mine monthly) of the SD card image, in this way if you have a hardware or software problem you will be able to get back up and running quickly without re-installing everything, here is a guide:  https://lifehacker.com/how-to-clone-your-raspberry-pi-sd-card-for-super-easy-r-1261113524 **
 
 Any tips to my SLR address: 8cESoZyjFvx2Deq6VjQLqPfAwu8UXjcBkK   Thanks
