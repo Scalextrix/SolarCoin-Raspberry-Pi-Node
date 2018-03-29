@@ -187,6 +187,8 @@ Enter the following:
 
 > addnode=nlsolarcoin.ddns.net
 
+> addnode=94.124.215.192
+
 > server=1
 
 > daemon=1
