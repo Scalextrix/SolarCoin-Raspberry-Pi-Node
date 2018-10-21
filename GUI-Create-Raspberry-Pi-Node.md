@@ -102,7 +102,7 @@ as the last line then CTRL+X, Y and Enter to save.
 
 b- Install Required Dependencies with next commands:
 
-> sudo apt-get install libqrencode-dev libqt5webkit5-dev qt5-qmake libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev-tools libminiupnpc-dev libdb4.8++ libdb5.3++-dev git rng-tools -y
+> sudo apt-get install build-essential libssl1.0-dev libzip-dev libboost-all-dev libqrencode-dev libqt5webkit5-dev qt5-qmake libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev-tools qt5-default libminiupnpc-dev libdb5.3++ libdb5.3++-dev git rng-tools -y
 
 We installed rng-tools to give us really good random number generation entropy, we just need to make one change to the configuration file
 
@@ -120,20 +120,13 @@ CTRL+X, Enter & Y to save
 
 5- Clone the SolarCoin Github, compile and install the client / node with following commands:
 
-> git clone https://github.com/onsightit/solarcoin-legacy.git
-
-> nano solarcoin-legacy/src/net.cpp
-
-Edit the line that reads 'array<int, THREAD_MAX> vnThreadsRunning;'
-*TIP; you can search for the line with CRTL+W
-
-make the line so it reads
-
-> boost::array<int, THREAD_MAX> vnThreadsRunning;
+> git clone https://github.com/solarcoin/solarcoin-legacy.git
 
 CTRL+X, Y and ENTER to save the changes
 
 > cd solarcoin-legacy
+
+> git checkout compile-revisions
 
 > qmake -qt=qt5
 
