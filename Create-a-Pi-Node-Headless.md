@@ -8,7 +8,7 @@ IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
 OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH USE OR OTHER DEALINGS.
 
-1 - THIS GUIDE ONLY WORKS ON RASPBIAN JESSIE, LITE DOWNLOADS AVAILABLE FROM https://downloads.raspberrypi.org/raspbian_lite/images/ make sure and use the version dated 2017-07-05
+1 - THIS GUIDE ONLY WORKS ON RASPBIAN STRETCH
 
 You will need to be able to open the command line Terminal either using a screen on the HDMI port with a keyboard and mouse, or via SSH.  The guide will compile a version of SolarCoin that can only be controlled via the command line.
 
@@ -102,7 +102,7 @@ as the last line then CTRL+X, Y and Enter to save.
 
 b- Install Required Dependencies with next commands:
 
-> sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev libdb-dev libdb4.8++ libdb5.3++-dev git hardening-includes rng-tools -y
+> sudo apt-get install autoconf libevent-dev libtool libssl1.0-dev libboost-all-dev libminiupnpc-dev libdb-dev libzip-dev libdb5.3++ libdb5.3++-dev git rng-tools -y
 
 We installed rng-tools to give us really good random number generation entropy, we just need to make one change to the configuration file
 
@@ -122,35 +122,21 @@ CTRL+X, Enter & Y to save
 
 > cd
 
-> git clone https://github.com/onsightit/solarcoin.git
+> git clone https://github.com/solarcoin/solarcoin-legacy.git
 
-> cd solarcoin
+> cd solarcoin-legacy
 
-> git checkout c97373dd89ada90da5add4312974763a86071ad2
+> git checkout compile-revisions
 
-NOTE: ** This will create a new directory /home/pi/solarcoin **
+NOTE: ** This will create a new directory /home/pi/solarcoin-legacy **
 
-> cd solarcoin/src
+> cd src
 
 > sudo make -f makefile.unix -e PIE=1
 
 NOTE: ** This is going to take a long time, go and make a cup of tea **
 
 > sudo strip solarcoind
-
-> hardening-check solarcoind
-
-** The output should look like:
-
- Position Independent Executable: yes
- 
- Stack protected: yes
- 
- Fortify Source functions: yes (some protected functions found)
- 
- Read-only relocations: yes
- 
- Immediate binding: yes**
 
 > sudo install -m 755 solarcoind /usr/local/bin/solarcoind
 
