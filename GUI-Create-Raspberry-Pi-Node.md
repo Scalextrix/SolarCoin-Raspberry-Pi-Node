@@ -162,7 +162,7 @@ Then add the following:
 
 > addnode=nlsolarcoin.ddns.net
 
-> addnode=scalextrixsolarcoin.ddns.net
+> addnode=solarhost.ddns.net
 
 > addnode=94.124.215.192
 
