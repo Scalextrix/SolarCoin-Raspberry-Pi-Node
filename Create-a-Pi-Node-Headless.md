@@ -1,3 +1,5 @@
+# It is no longer possible to use a Raspberry Pi for SolarCoin, the RAM requirements of the blockchain have exceeded 1GB
+
 # Headless-SolarCoin-Raspberry-Pi-Node
 Instructions to build a SolarCoin full node on Raspberry Pi, for future proofing SBCs with higher RAM may be needed, for a Rock64 install see https://github.com/jegb/solarcoin-legacy/wiki/Rock64-node
 
