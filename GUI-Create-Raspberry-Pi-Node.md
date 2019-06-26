@@ -1,4 +1,4 @@
-# It is no longer possible to use a Raspberry Pi for SolarCoin, the RAM requirements of the blockchain have exceeded 1GB
+# It is no longer possible to use a Raspberry Pi 2/3 for SolarCoin, the RAM requirements of the blockchain have exceeded 1GB, however Raspberry Pi 4 may work, try 4GB version for maximum longevity
 
 # Gui-SolarCoin-Raspberry-Pi-Node
 Instructions to build a SolarCoin full node on Raspberry Pi, for future proofing SBCs with higher RAM may be needed, for a Rock64 install see https://github.com/jegb/solarcoin-legacy/wiki/Rock64-node
