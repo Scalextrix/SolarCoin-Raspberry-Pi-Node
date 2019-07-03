@@ -122,11 +122,9 @@ CTRL+X, Enter & Y to save
 
 5- Clone the SolarCoin Github, compile and install the client / node with following commands:
 
-> git clone https://github.com/solarcoin/solarcoin-legacy.git
+> git clone https://github.com/solarcoin/solarcoin-wallet-stable
 
-CTRL+X, Y and ENTER to save the changes
-
-> cd solarcoin-legacy
+> cd solarcoin-wallet-stable
 
 > git checkout compile-revisions
 
