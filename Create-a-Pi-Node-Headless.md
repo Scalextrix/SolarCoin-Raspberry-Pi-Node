@@ -124,9 +124,9 @@ CTRL+X, Enter & Y to save
 
 > cd
 
-> git clone https://github.com/solarcoin/solarcoin-legacy.git
+> git clone https://github.com/solarcoin/solarcoin-wallet-stable
 
-> cd solarcoin-legacy
+> cd solarcoin-wallet-stable
 
 > git checkout compile-revisions
 
