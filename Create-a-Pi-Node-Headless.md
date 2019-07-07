@@ -104,7 +104,7 @@ as the last line then CTRL+X, Y and Enter to save.
 
 b- Install Required Dependencies with next commands:
 
-> sudo apt-get install autoconf libevent-dev libtool libssl1.0-dev libboost-all-dev libminiupnpc-dev libdb-dev libzip-dev libdb5.3++ libdb5.3++-dev git rng-tools -y
+> sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev libminiupnpc-dev libdb-dev libzip-dev libdb5.3++ libdb5.3++-dev git rng-tools -y
 
 We installed rng-tools to give us really good random number generation entropy, we just need to make one change to the configuration file
 
