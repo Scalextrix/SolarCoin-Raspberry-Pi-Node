@@ -142,6 +142,30 @@ You are done with the terminal window, and can close it, if you are on SSH you n
 
 > solarcoin-qt
 
+6a- Show the solarcoin-qt app in your desktop launcher:
+
+> sudo nano ~/.local/share/applications/solarcoin-qt.desktop
+
+In file add:
+
+> [Desktop Entry]
+
+> Encoding=UTF-8
+
+> Version=1.0
+
+> Type=Application
+
+> Terminal=false
+
+> Exec=/usr/local/bin/solarcoin-qt
+
+> Name=SolarCoin
+
+> Icon=/home/pi/solarcoin-wallet-stable/src/qt/res/images/logo.png
+
+Press CTRL+x, then y and Enter to Save
+
 NOTE: Allow the wallet to sync slowly, do NOT use the block-chain snapshot
 
 If you have any problems getting connections (you may want to do this anyway):
